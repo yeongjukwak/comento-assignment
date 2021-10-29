@@ -13,6 +13,10 @@ IT 대기업 현업 개발자와 함께 하는 백엔드 개발 실무 (2021. 10
 2. <beans> 태그에 xmlns:context="http://www.springframework.org/schema/context" 추가 후, root-context.xml namespaces에서 context default version 설정
 3. <!DOCTYPE> 부분의 "log4j.dtd" 부분을 "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd"로 변경 후, 변경한 주소에서 'log4j.dtd' 파일을 다운 후, log4j.xml과 같은 위치에 복붙
 
+**실행결과**  
+  
+![1주차 과제 실행결과](https://user-images.githubusercontent.com/77434165/139442240-eda63ebb-3846-4a76-ace4-bd5ca501d369.png)
+  
 ## Week-02
 
 
