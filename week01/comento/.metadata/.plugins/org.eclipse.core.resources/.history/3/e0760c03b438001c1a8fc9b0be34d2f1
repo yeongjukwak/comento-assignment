@@ -1,0 +1,5 @@
+package com.comento.service;
+
+public interface MovieService {
+
+}

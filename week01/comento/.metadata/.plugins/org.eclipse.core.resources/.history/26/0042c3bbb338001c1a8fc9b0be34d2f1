@@ -1,0 +1,5 @@
+package com.comento.dao;
+
+public interface MovieDAO {
+
+}

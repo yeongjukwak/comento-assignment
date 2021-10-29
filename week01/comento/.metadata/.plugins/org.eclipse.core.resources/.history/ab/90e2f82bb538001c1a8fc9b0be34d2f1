@@ -1,0 +1,11 @@
+package com.comento.vo;
+
+public class MovieVO {
+	//private int movie_id;
+	private String movie_name;
+	private String director;
+	private String types;
+	//private String moviecol;
+	
+	
+}

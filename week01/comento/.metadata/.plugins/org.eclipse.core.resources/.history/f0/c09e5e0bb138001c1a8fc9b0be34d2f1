@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="dataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"
+            value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+        <property name="url"
+            value="jdbc:log4jdbc:mariadb://192.168.1.16:3306/Theater" />
+        <property name="username" value="root" />
+        <property name="password" value="1234" />
+    </bean>
+ 
+ 
+    <bean id="sqlSessionFactory"
+        class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="configLocation"
+            value="classpath:/mybatis/mybatis-config.xml"></property>
+        <property name="mapperLocations"
+            value="classpath*:/mybatis/sql/*.xml"></property>
+    </bean>
+ 
+    <bean id="sqlSession"
+        class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg name="sqlSessionFactory"
+            ref="sqlSessionFactory"></constructor-arg>
+    </bean>
+ 
+    <!-- <mybatis-spring:scan base-package="com.devfun.dao" /> -->
+    <context:component-scan
+        base-package="com.devfun.dao"></context:component-scan>
+    <context:component-scan
+        base-package="com.devfun.service"></context:component-scan>
+		
+</beans>
