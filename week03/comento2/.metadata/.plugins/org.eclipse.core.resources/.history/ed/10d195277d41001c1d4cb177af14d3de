@@ -1,0 +1,5 @@
+package com.comento.web.service;
+
+public class StatisticServiceImpl {
+
+}
